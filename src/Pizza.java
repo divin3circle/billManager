@@ -25,35 +25,36 @@ public class Pizza {
 
     public void addExtraCheese(){
         if(!isExtraCheese) {
-            System.out.println("Added extra cheese!: " + extraCheesePrice + " Ksh.");
+            System.out.println("+ Added extra cheese!: " + extraCheesePrice + " Ksh.");
             this.price += extraCheesePrice;
         }else{
-            System.out.println("Extra cheese already added!");
+            System.out.println("!* Extra cheese already added!");
         }
         isExtraCheese = true;
     }
 
     public void addExtraToppings(){
         if(!isToppings) {
-            System.out.println("Added extra toppings!: " + extraToppingsPrice + " Ksh.");
+            System.out.println("+ Added extra toppings!: " + extraToppingsPrice + " Ksh.");
             this.price += extraToppingsPrice;
         }else {
-            System.out.println("Extra toppings already added!");
+            System.out.println("*! Extra toppings already added!");
         }
         isToppings = true;
     }
 
     public void takeAway(){
         if(!isTakeAway) {
-            System.out.println("Takeaway order for: " + takeAwayPrice + " Ksh.");
+            System.out.println("+ Takeaway order for: " + takeAwayPrice + " Ksh.");
             this.price += takeAwayPrice;
         }else{
-            System.out.println("Takeaway already selected!");
+            System.out.println("*! Takeaway already selected!");
         }
         isTakeAway = true;
     }
 
     public void getBill(){
+        System.out.println();
         System.out.println("----------------------------------");
         System.out.println("-------------Bill-----------------");
         System.out.println("Base pizza: " + basePrice + " Ksh.");
@@ -66,5 +67,9 @@ public class Pizza {
         if(isTakeAway){
             System.out.println("Takeaway services: " + takeAwayPrice + " Ksh.");
         }
+        System.out.println("--------------TOTAL---------------");
+        System.out.println("\t \t \t Ksh: " + this.price);
+        System.out.println("----------------------------------");
+        System.out.println();
     }
 }
